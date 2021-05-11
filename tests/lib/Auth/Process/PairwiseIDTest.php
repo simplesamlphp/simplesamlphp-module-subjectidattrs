@@ -22,13 +22,13 @@ use SimpleSAML\Utils;
 class PairwiseIDTest extends TestCase
 {
     /** @var \SimpleSAML\Configuration */
-    protected Configuration $config;
+    protected $config;
 
     /** @var \SimpleSAML\Utils\Config */
-    protected static Utils\Config $configUtils;
+    protected static $configUtils;
 
     /** @var \SimpleSAML\Logger */
-    protected static Logger $logger;
+    protected static $logger;
 
 
     /**
