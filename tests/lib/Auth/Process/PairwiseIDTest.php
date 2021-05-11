@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SimpleSAML\Test\Module\subject-identifier-attrs\Auth\Process;
+namespace SimpleSAML\Test\Module\subjectidentifierattrs\Auth\Process;
 
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
