@@ -18,13 +18,16 @@
     },
     "autoload": {
         "psr-4": {
-            "SimpleSAML\\Module\\subject-identifier-attrs\\": "lib/"
+            "SimpleSAML\\Module\\subjectidentifierattrs\\": "lib/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "SimpleSAML\\Test\\Utils\\": "vendor/simplesamlphp/simplesamlphp/tests/Utils"
         }
+    },
+    "extra": {
+        "ssp-mixedcase-module-name": "subjectidentifierattrs"
     },
     "require": {
         "php": ">=7.4 || ^8.0",

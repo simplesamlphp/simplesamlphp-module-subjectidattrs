@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SimpleSAML\Module\subject-identifier-attrs\Auth\Process;
+namespace SimpleSAML\Module\subjectidentifierattrs\Auth\Process;
 
 use Exception;
 use SAML2\Constants;
