@@ -36,7 +36,7 @@ class SubjectIDTest extends TestCase
         parent::setUp();
 
         self::$logger = new class () extends Logger {
-            public static function warning(string $string): void
+            public static function warning($string): void
             {
                 // stub
                 throw new RuntimeException($string);
