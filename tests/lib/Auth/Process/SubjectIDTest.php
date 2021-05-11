@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SimpleSAML\Test\Module\subjectidentifierattrs\Auth\Process;
+namespace SimpleSAML\Test\Module\subjectidattrs\Auth\Process;
 
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
@@ -11,13 +11,13 @@ use SAML2\XML\saml\NameID;
 use SimpleSAML\Assert\AssertionFailedException;
 use SimpleSAML\Configuration;
 use SimpleSAML\Logger;
-use SimpleSAML\Module\subjectidentifierattrs\Auth\Process\SubjectID;
+use SimpleSAML\Module\subjectidattrs\Auth\Process\SubjectID;
 use SimpleSAML\Utils;
 
 /**
  * Test for the core:SubjectID filter.
  *
- * @covers \SimpleSAML\Module\subjectidentifierattrs\Auth\Process\SubjectID
+ * @covers \SimpleSAML\Module\subjectidattrs\Auth\Process\SubjectID
  */
 class SubjectIDTest extends TestCase
 {
