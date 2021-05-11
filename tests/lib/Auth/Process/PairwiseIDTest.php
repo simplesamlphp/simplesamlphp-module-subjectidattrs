@@ -331,9 +331,10 @@ class PairwiseIDTest extends TestCase
             'core:SP' => 'urn:sp',
         ];
 
+        $expected = 'c5b54935db5e291a6b94688921fa77ced8ce425ce8c61a448bd4997f494dbebe@b';
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage(
-            'core:PairwiseID: Generated ID \'c5b54935db5e291a6b94688921fa77ced8ce425ce8c61a448bd4997f494dbebe@b\' can hardly be considered globally unique.'
+            'core:PairwiseID: Generated ID \'' . $expected . '\' can hardly be considered globally unique.'
         );
 
         self::processFilter($config, $request);
