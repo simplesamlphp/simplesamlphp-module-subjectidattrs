@@ -86,7 +86,7 @@ class PairwiseIDTest extends TestCase
         $result = self::processFilter($config, $request);
         $attributes = $result['Attributes'];
         $this->assertArrayHasKey(Constants::ATTR_PAIRWISE_ID, $attributes);
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             PairwiseID::SPEC_PATTERN,
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
@@ -110,7 +110,7 @@ class PairwiseIDTest extends TestCase
         $result = self::processFilter($config, $request);
         $attributes = $result['Attributes'];
         $this->assertArrayHasKey(Constants::ATTR_PAIRWISE_ID, $attributes);
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             PairwiseID::SPEC_PATTERN,
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
@@ -134,7 +134,7 @@ class PairwiseIDTest extends TestCase
         $result = self::processFilter($config, $request);
         $attributes = $result['Attributes'];
         $this->assertArrayHasKey(Constants::ATTR_PAIRWISE_ID, $attributes);
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             PairwiseID::SPEC_PATTERN,
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
@@ -158,7 +158,7 @@ class PairwiseIDTest extends TestCase
         $result = self::processFilter($config, $request);
         $attributes = $result['Attributes'];
         $this->assertArrayHasKey(Constants::ATTR_PAIRWISE_ID, $attributes);
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             PairwiseID::SPEC_PATTERN,
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
@@ -309,11 +309,11 @@ class PairwiseIDTest extends TestCase
 
         $this->assertNotSame($value1, $value2);
 
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             '/@example.org$/i',
             $value1
         );
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             '/@example.edu$/i',
             $value2
         );

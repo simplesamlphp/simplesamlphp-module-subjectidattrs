@@ -73,7 +73,7 @@ class SubjectIDTest extends TestCase
         $result = self::processFilter($config, $request);
         $attributes = $result['Attributes'];
         $this->assertArrayHasKey(Constants::ATTR_SUBJECT_ID, $attributes);
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             SubjectID::SPEC_PATTERN,
             $attributes[Constants::ATTR_SUBJECT_ID][0]
         );
@@ -93,7 +93,7 @@ class SubjectIDTest extends TestCase
         $result = self::processFilter($config, $request);
         $attributes = $result['Attributes'];
         $this->assertArrayHasKey(Constants::ATTR_SUBJECT_ID, $attributes);
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             SubjectID::SPEC_PATTERN,
             $attributes[Constants::ATTR_SUBJECT_ID][0]
         );
@@ -187,11 +187,11 @@ class SubjectIDTest extends TestCase
 
         $this->assertNotSame($value1, $value2);
 
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             '/@example.org$/i',
             $value1
         );
-        $this->assertMatchesRegularExpression(
+        $this->assertRegExp(
             '/@example.edu$/i',
             $value2
         );
