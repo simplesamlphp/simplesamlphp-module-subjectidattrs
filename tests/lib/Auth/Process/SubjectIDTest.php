@@ -11,7 +11,7 @@ use SAML2\XML\saml\NameID;
 use SimpleSAML\Assert\AssertionFailedException;
 use SimpleSAML\Configuration;
 use SimpleSAML\Logger;
-use SimpleSAML\Module\core\Auth\Process\SubjectID;
+use SimpleSAML\Module\subjectidentifierattrs\Auth\Process\SubjectID;
 use SimpleSAML\Utils;
 
 /**
