@@ -17,7 +17,7 @@ use SimpleSAML\Utils;
 /**
  * Test for the core:SubjectID filter.
  *
- * @covers \SimpleSAML\Module\core\Auth\Process\SubjectID
+ * @covers \SimpleSAML\Module\subjectidentifierattrs\Auth\Process\SubjectID
  */
 class SubjectIDTest extends TestCase
 {

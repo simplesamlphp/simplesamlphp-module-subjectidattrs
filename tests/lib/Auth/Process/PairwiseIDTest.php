@@ -17,7 +17,7 @@ use SimpleSAML\Utils;
 /**
  * Test for the core:PairwiseID filter.
  *
- * @covers \SimpleSAML\Module\core\Auth\Process\PairwiseID
+ * @covers \SimpleSAML\Module\subjectidentifierattrs\Auth\Process\PairwiseID
  */
 class PairwiseIDTest extends TestCase
 {
