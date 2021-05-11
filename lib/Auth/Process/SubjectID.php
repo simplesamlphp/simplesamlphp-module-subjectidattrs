@@ -28,7 +28,7 @@ use SimpleSAML\Logger;
  * <code>
  * 'authproc' => [
  *   50 => [
- *       'core:SubjectID',
+ *       'subjectidattrs:SubjectID',
  *       'identifyingAttribute' => 'uid',
  *       'scopeAttribute' => 'scope',
  *   ]
@@ -143,7 +143,7 @@ class SubjectID extends Auth\ProcessingFilter
         ) {
             $this->logger::warning(
                 sprintf(
-                    "core:" . static::NAME . ": Missing attribute '%s', which is needed to generate the ID.",
+                    "subjectidattrs:" . static::NAME . ": Missing attribute '%s', which is needed to generate the ID.",
                     $this->identifyingAttribute
                 )
             );
@@ -152,7 +152,7 @@ class SubjectID extends Auth\ProcessingFilter
         }
 
         $userID = $state['Attributes'][$this->identifyingAttribute][0];
-        Assert::stringNotEmpty($userID, 'core' . static::NAME . ': \'identifyingAttribute\' cannot be an empty string.');
+        Assert::stringNotEmpty($userID, 'subjectidattrs:' . static::NAME . ': \'identifyingAttribute\' cannot be an empty string.');
 
         return $userID;
     }
@@ -170,7 +170,7 @@ class SubjectID extends Auth\ProcessingFilter
         if (!array_key_exists('Attributes', $state) || !array_key_exists($this->scopeAttribute, $state['Attributes'])) {
             $this->logger::warning(
                 sprintf(
-                    "core:" . static::NAME . ": Missing attribute '%s', which is needed to generate the ID.",
+                    "subjectidattrs:" . static::NAME . ": Missing attribute '%s', which is needed to generate the ID.",
                     $this->scopeAttribute
                 )
             );
@@ -179,7 +179,7 @@ class SubjectID extends Auth\ProcessingFilter
         }
 
         $scope = $state['Attributes'][$this->scopeAttribute][0];
-        Assert::stringNotEmpty($scope, 'core' . static::NAME . ': \'scopeAttribute\' cannot be an empty string.');
+        Assert::stringNotEmpty($scope, 'subjectidattrs:' . static::NAME . ': \'scopeAttribute\' cannot be an empty string.');
 
         // If the value is scoped, extract the scope from it
         if (strpos($scope, '@') !== false) {
@@ -190,7 +190,7 @@ class SubjectID extends Auth\ProcessingFilter
         Assert::regex(
             $scope,
             self::SCOPE_PATTERN,
-            'core:' . static::NAME . ': \'scopeAttribute\' contains illegal characters.'
+            'subjectidattrs:' . static::NAME . ': \'scopeAttribute\' contains illegal characters.'
             // ProtocolViolationException::class
         );
         return $scope;
@@ -210,13 +210,13 @@ class SubjectID extends Auth\ProcessingFilter
         Assert::regex(
             $value,
             self::SPEC_PATTERN,
-            'core:' . static::NAME . ': Generated ID \'' . $value . '\' contains illegal characters.'
+            'subjectidattrs:' . static::NAME . ': Generated ID \'' . $value . '\' contains illegal characters.'
             // ProtocolViolationException::class
         );
 
         if (preg_match(self::WARN_PATTERN, $value) === 0) {
             $this->logger::warning(
-                'core:' . static::NAME . ': Generated ID \'' . $value . '\' can hardly be considered globally unique.'
+                'subjectidattrs:' . static::NAME . ': Generated ID \'' . $value . '\' can hardly be considered globally unique.'
             );
         }
     }

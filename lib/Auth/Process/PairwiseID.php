@@ -27,7 +27,7 @@ use SimpleSAML\Utils;
  * <code>
  * 'authproc' => [
  *   50 => [
- *       'core:PairwiseID',
+ *       'subjectidattrs:PairwiseID',
  *       'identifyingAttribute' => 'uid',
  *       'scopeAttribute' => 'example.org',
  *   ]

@@ -15,7 +15,7 @@ use SimpleSAML\Module\subjectidattrs\Auth\Process\PairwiseID;
 use SimpleSAML\Utils;
 
 /**
- * Test for the core:PairwiseID filter.
+ * Test for the subjectidattrs:PairwiseID filter.
  *
  * @covers \SimpleSAML\Module\subjectidattrs\Auth\Process\PairwiseID
  */
@@ -334,7 +334,7 @@ class PairwiseIDTest extends TestCase
         $expected = 'c5b54935db5e291a6b94688921fa77ced8ce425ce8c61a448bd4997f494dbebe@b';
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage(
-            'core:PairwiseID: Generated ID \'' . $expected . '\' can hardly be considered globally unique.'
+            'subjectidattrs:PairwiseID: Generated ID \'' . $expected . '\' can hardly be considered globally unique.'
         );
 
         self::processFilter($config, $request);
