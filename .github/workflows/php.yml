@@ -23,7 +23,7 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           tools: composer:v2
           extensions: ldap, mbstring, xml
-          coverage: pcov
+          coverage: xdebug
 
       - name: Setup problem matchers for PHP
         run: echo "::add-matcher::${{ runner.tool_cache }}/php.json"
