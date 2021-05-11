@@ -137,7 +137,10 @@ class SubjectID extends Auth\ProcessingFilter
      */
     protected function getIdentifyingAttribute(array $state): ?string
     {
-        if (!array_key_exists('Attributes', $state) || !array_key_exists($this->identifyingAttribute, $state['Attributes'])) {
+        if (
+            !array_key_exists('Attributes', $state)
+            || !array_key_exists($this->identifyingAttribute, $state['Attributes'])
+        ) {
             $this->logger::warning(
                 sprintf(
                     "core:" . static::NAME . ": Missing attribute '%s', which is needed to generate the ID.",
@@ -188,7 +191,7 @@ class SubjectID extends Auth\ProcessingFilter
             $scope,
             self::SCOPE_PATTERN,
             'core:' . static::NAME . ': \'scopeAttribute\' contains illegal characters.'
-//            ProtocolViolationException::class
+            // ProtocolViolationException::class
         );
         return $scope;
     }
@@ -208,11 +211,13 @@ class SubjectID extends Auth\ProcessingFilter
             $value,
             self::SPEC_PATTERN,
             'core:' . static::NAME . ': Generated ID \'' . $value . '\' contains illegal characters.'
-//            ProtocolViolationException::class
+            // ProtocolViolationException::class
         );
 
         if (preg_match(self::WARN_PATTERN, $value) === 0) {
-            $this->logger::warning('core:' . static::NAME . ': Generated ID \'' . $value . '\' can hardly be considered globally unique.');
+            $this->logger::warning(
+                'core:' . static::NAME . ': Generated ID \'' . $value . '\' can hardly be considered globally unique.'
+            );
         }
     }
 
