@@ -111,7 +111,7 @@ class SubjectID extends Auth\ProcessingFilter
      *
      * @param array &$state  The current state.
      */
-    public function process(array &$state): void
+    public function process(&$state)
     {
         $userID = $this->getIdentifyingAttribute($state);
         $scope = $this->getScopeAttribute($state);
