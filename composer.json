@@ -1,0 +1,42 @@
+{
+    "name": "simplesamlphp/simplesamlphp-module-subject-identifier-attrs",
+    "description": "Module implementing SAML V2.0 Subject Identifier Attributes Profile",
+    "type": "simplesamlphp-module",
+    "keywords": ["simplesamlphp", "oasis", "subject"],
+    "license": "LGPL-2.1-or-later",
+    "authors": [
+        {
+            "name": "Tim van Dijen",
+            "email": "tvdijen@gmail.com"
+        }
+    ],
+    "config": {
+        "preferred-install": {
+            "simplesamlphp/simplesamlphp": "source",
+            "*": "dist"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "SimpleSAML\\Module\\subject-identifier-attrs\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SimpleSAML\\Test\\Utils\\": "vendor/simplesamlphp/simplesamlphp/tests/Utils"
+        }
+    },
+    "require": {
+        "php": ">=7.4 || ^8.0",
+        "simplesamlphp/assert": "~0.1.0",
+        "simplesamlphp/simplesamlphp": "dev-master",
+        "simplesamlphp/composer-module-installer": "~1.1"
+    },
+    "require-dev": {
+        "simplesamlphp/simplesamlphp-test-framework": "^1.1.0"
+    },
+    "support": {
+        "issues": "https://github.com/simplesamlphp/simplesamlphp-module-subject-identifier-attrs/issues",
+        "source": "https://github.com/simplesamlphp/simplesamlphp-module-subject-identifier-attrs"
+    }
+}
