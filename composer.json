@@ -36,7 +36,7 @@
         "simplesamlphp/composer-module-installer": "~1.1.8"
     },
     "require-dev": {
-        "simplesamlphp/simplesamlphp-test-framework": "^0.1.2"
+        "simplesamlphp/simplesamlphp-test-framework": "0.1.2"
     },
     "support": {
         "issues": "https://github.com/simplesamlphp/simplesamlphp-module-subject-identifier-attrs/issues",
