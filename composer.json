@@ -30,9 +30,6 @@
             "SimpleSAML\\Test\\Utils\\": "vendor/simplesamlphp/simplesamlphp/tests/Utils"
         }
     },
-    "extra": {
-        "ssp-mixedcase-module-name": "subjectidentifierattrs"
-    },
     "require": {
         "php": ">=7.4 || ^8.0",
 
