@@ -22,10 +22,10 @@ use SimpleSAML\Utils;
 class SubjectIDTest extends TestCase
 {
     /** @var \SimpleSAML\Configuration */
-    protected Configuration $config;
+    protected $config;
 
     /** @var \SimpleSAML\Logger */
-    protected static Logger $logger;
+    protected static $logger;
 
 
     /**

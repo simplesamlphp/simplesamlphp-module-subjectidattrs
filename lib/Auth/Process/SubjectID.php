@@ -70,14 +70,14 @@ class SubjectID extends Auth\ProcessingFilter
      *
      * @var string
      */
-    protected string $identifyingAttribute;
+    protected $identifyingAttribute;
 
     /**
      * The attribute we should use for the scope of the subject id.
      *
      * @var string
      */
-    protected string $scopeAttribute;
+    protected $scopeAttribute;
 
     /**
      * @var \SimpleSAML\Logger|string
