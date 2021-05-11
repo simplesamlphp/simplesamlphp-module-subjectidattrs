@@ -15,7 +15,7 @@ use SimpleSAML\Module\subjectidattrs\Auth\Process\SubjectID;
 use SimpleSAML\Utils;
 
 /**
- * Test for the core:SubjectID filter.
+ * Test for the subjectidattrs:SubjectID filter.
  *
  * @covers \SimpleSAML\Module\subjectidattrs\Auth\Process\SubjectID
  */
@@ -209,7 +209,7 @@ class SubjectIDTest extends TestCase
         ];
 
         $this->expectException(RuntimeException::class);
-        $this->expectExceptionMessage('core:SubjectID: Generated ID \'a@b\' can hardly be considered globally unique.');
+        $this->expectExceptionMessage('subjectidattrs:SubjectID: Generated ID \'a@b\' can hardly be considered globally unique.');
 
         self::processFilter($config, $request);
     }

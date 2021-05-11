@@ -1,4 +1,4 @@
-`core:SubjectID`
+`subjectidattrs:SubjectID`
 ===================
 
 Filter to insert a subject-id that complies with the following specification;
@@ -19,7 +19,7 @@ Examples
 
     'authproc' => [
         50 => [
-            'class' => 'core:SubjectID',
+            'class' => 'subjectidattrs:SubjectID',
             'identifyingAttribute' => 'uid',
             'scopeAttribute' => 'scope',
         ],

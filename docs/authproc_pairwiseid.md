@@ -1,4 +1,4 @@
-`core:PairwiseID`
+`subjectidattrs:PairwiseID`
 ===================
 
 Filter to insert a pairwise-id that complies with the following specification;
@@ -16,7 +16,7 @@ Examples
 
     'authproc' => [
         50 => [
-            'class' => 'core:PairwiseID',
+            'class' => 'subjectidattrs:PairwiseID',
             'identifyingAttribute' => 'uid',
             'scopeAttribute' => 'scope',
         ],
