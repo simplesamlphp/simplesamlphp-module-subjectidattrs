@@ -1,5 +1,5 @@
 {
-    "name": "simplesamlphp/simplesamlphp-module-subject-identifier-attrs",
+    "name": "simplesamlphp/simplesamlphp-module-subjectidattrs",
     "description": "Module implementing SAML V2.0 Subject Identifier Attributes Profile",
     "type": "simplesamlphp-module",
     "keywords": ["simplesamlphp", "oasis", "subject"],
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SimpleSAML\\Module\\subjectidentifierattrs\\": "lib/"
+            "SimpleSAML\\Module\\subjectidattrs\\": "lib/"
         }
     },
     "autoload-dev": {
@@ -36,7 +36,7 @@
         "simplesamlphp/simplesamlphp-test-framework": "0.1.2"
     },
     "support": {
-        "issues": "https://github.com/simplesamlphp/simplesamlphp-module-subject-identifier-attrs/issues",
-        "source": "https://github.com/simplesamlphp/simplesamlphp-module-subject-identifier-attrs"
+        "issues": "https://github.com/simplesamlphp/simplesamlphp-module-subjectidattrs/issues",
+        "source": "https://github.com/simplesamlphp/simplesamlphp-module-subjectidattrs"
     }
 }
