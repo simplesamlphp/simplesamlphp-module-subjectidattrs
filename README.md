@@ -19,7 +19,11 @@ composer.phar require simplesamlphp/simplesamlphp-module-subjectidattrs:dev-mast
 ```
 
 where `dev-master` instructs Composer to install the `master` branch from the Git repository. See the
+<<<<<<< HEAD
 [releases](https://github.com/simplesamlphp/simplesamlphp-module-subjectidattrs/releases) available if you
+=======
+[releases](https://github.com/simplesamlphp/simplesamlphp-module-logpeek/subjectidattrs) available if you
+>>>>>>> f99a1b5... Fix badges
 want to use a stable version of the module.
 
 This module is disabled by default. To enable it, configure it in the SimpleSAMLphp config.php under `module.enable`
