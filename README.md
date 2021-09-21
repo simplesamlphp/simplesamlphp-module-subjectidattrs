@@ -1,6 +1,6 @@
-![Build Status](https://github.com/simplesamlphp/simplesamlphp-module-subject-identifier-attrs/workflows/CI/badge.svg?branch=master)
-[![Coverage Status](https://codecov.io/gh/simplesamlphp/simplesamlphp-module-subject-identifier-attrs/branch/master/graph/badge.svg)](https://codecov.io/gh/simplesamlphp/simplesamlphp-module-subject-identifier-attrs)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/simplesamlphp/simplesamlphp-module-subject-identifier-attrs/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/simplesamlphp/simplesamlphp-module-subject-identifier-attrs/?branch=master)
+![Build Status](https://github.com/simplesamlphp/simplesamlphp-module-subjectidattrs/workflows/CI/badge.svg?branch=master)
+[![Coverage Status](https://codecov.io/gh/simplesamlphp/simplesamlphp-module-subjectidattrs/branch/master/graph/badge.svg)](https://codecov.io/gh/simplesamlphp/simplesamlphp-module-subjectidattrs)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/simplesamlphp/simplesamlphp-module-subjectidattrs/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/simplesamlphp/simplesamlphp-module-subjectidattrs/?branch=master)
 
 subject-identifier-attrs module
 ===============================
@@ -15,11 +15,11 @@ Once you have installed SimpleSAMLphp, installing this module is very simple. Ju
 command in the root of your SimpleSAMLphp installation:
 
 ```
-composer.phar require simplesamlphp/simplesamlphp-module-subject-identifier-attrs:dev-master
+composer.phar require simplesamlphp/simplesamlphp-module-subjectidattrs:dev-master
 ```
 
 where `dev-master` instructs Composer to install the `master` branch from the Git repository. See the
-[releases](https://github.com/simplesamlphp/simplesamlphp-module-logpeek/subject-identifier-attrs) available if you
+[releases](https://github.com/simplesamlphp/simplesamlphp-module-subjectidattrs/releases) available if you
 want to use a stable version of the module.
 
 This module is disabled by default. To enable it, configure it in the SimpleSAMLphp config.php under `module.enable`
