@@ -55,7 +55,7 @@ class PairwiseID extends SubjectID
      *
      * @param array &$state  The current state.
      */
-    public function process(&$state)
+    public function process(array &$state): void
     {
         $userID = $this->getIdentifyingAttribute($state);
         $scope = $this->getScopeAttribute($state);

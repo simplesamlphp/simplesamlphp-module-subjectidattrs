@@ -39,7 +39,7 @@ class PairwiseIDTest extends TestCase
         parent::setUp();
 
         self::$configUtils = new class () extends Utils\Config {
-            public static function getSecretSalt()
+            public function getSecretSalt(): string
             {
                 // stub
                 return 'secretsalt';
@@ -264,7 +264,7 @@ class PairwiseIDTest extends TestCase
 
         // Change the salt
         self::$configUtils = new class () extends Utils\Config {
-            public static function getSecretSalt(): string
+            public function getSecretSalt(): string
             {
                 // stub
                 return 'pepper';
