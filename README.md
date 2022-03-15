@@ -1,6 +1,8 @@
 ![Build Status](https://github.com/simplesamlphp/simplesamlphp-module-subjectidattrs/workflows/CI/badge.svg?branch=master)
 [![Coverage Status](https://codecov.io/gh/simplesamlphp/simplesamlphp-module-subjectidattrs/branch/master/graph/badge.svg)](https://codecov.io/gh/simplesamlphp/simplesamlphp-module-subjectidattrs)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/simplesamlphp/simplesamlphp-module-subjectidattrs/badges/quality-score.png?branch=master)](https://scrutinizer-ci.com/g/simplesamlphp/simplesamlphp-module-subjectidattrs/?branch=master)
+[![Type Coverage](https://shepherd.dev/github/simplesamlphp/simplesamlphp-module-subjectidattrs/coverage.svg)](https://shepherd.dev/github/simplesamlphp/simplesamlphp-module-subjectidattrs)
+[![Psalm Level](https://shepherd.dev/github/simplesamlphp/simplesamlphp-module-subjectidattrs/level.svg)](https://shepherd.dev/github/simplesamlphp/simplesamlphp-module-subjectidattrs)
 
 subject-identifier-attrs module
 ===============================
