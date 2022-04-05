@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SimpleSAML\\Module\\subjectidattrs\\": "lib/"
+            "SimpleSAML\\Module\\subjectidattrs\\": "src/"
         }
     },
     "autoload-dev": {
