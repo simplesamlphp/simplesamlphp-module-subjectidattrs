@@ -89,7 +89,7 @@ class PairwiseID extends SubjectID
         $salt = $this->configUtils->getSecretSalt();
         $hash = hash('sha256', $salt . '|' . $userID . '|' . $sp_entityid, false);
 
-        $value = strtolower($hash . '@' . $scope);
+        $value = $hash . '@' . strtolower($scope);
         $this->validateGeneratedIdentifier($value);
 
         $state['Attributes'][Constants::ATTR_PAIRWISE_ID] = [$value];
