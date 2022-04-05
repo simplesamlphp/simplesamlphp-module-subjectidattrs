@@ -7,12 +7,10 @@ namespace SimpleSAML\Test\Module\subjectidattrs\Auth\Process;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 use SAML2\Constants;
-use SAML2\XML\saml\NameID;
+use SAML2\Exception\ProtocolViolationException;
 use SimpleSAML\Assert\AssertionFailedException;
-use SimpleSAML\Configuration;
-use SimpleSAML\Logger;
+use SimpleSAML\{Configuration, Logger, Utils};
 use SimpleSAML\Module\subjectidattrs\Auth\Process\SubjectID;
-use SimpleSAML\Utils;
 
 /**
  * Test for the subjectidattrs:SubjectID filter.
@@ -111,7 +109,7 @@ class SubjectIDTest extends TestCase
             'Attributes' => ['uid' => ['u=se+r2'], 'scope' => ['example.org']],
         ];
 
-        $this->expectException(AssertionFailedException::class);
+        $this->expectException(ProtocolViolationException::class);
         self::processFilter($config, $request);
     }
 
@@ -126,7 +124,7 @@ class SubjectIDTest extends TestCase
             'Attributes' => ['uid' => ['user2'], 'scope' => ['ex%ample.org']],
         ];
 
-        $this->expectException(AssertionFailedException::class);
+        $this->expectException(ProtocolViolationException::class);
         self::processFilter($config, $request);
     }
 

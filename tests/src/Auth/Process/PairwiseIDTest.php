@@ -7,12 +7,10 @@ namespace SimpleSAML\Test\Module\subjectidattrs\Auth\Process;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 use SAML2\Constants;
-use SAML2\XML\saml\NameID;
+use SAML2\Exception\ProtocolViolationException;
 use SimpleSAML\Assert\AssertionFailedException;
-use SimpleSAML\Configuration;
-use SimpleSAML\Logger;
+use SimpleSAML\{Configuration, Logger, Utils};
 use SimpleSAML\Module\subjectidattrs\Auth\Process\PairwiseID;
-use SimpleSAML\Utils;
 
 /**
  * Test for the subjectidattrs:PairwiseID filter.
@@ -180,7 +178,7 @@ class PairwiseIDTest extends TestCase
             'core:SP' => 'urn:sp',
         ];
 
-        $this->expectException(AssertionFailedException::class);
+        $this->expectException(ProtocolViolationException::class);
         self::processFilter($config, $request);
     }
 
@@ -331,7 +329,7 @@ class PairwiseIDTest extends TestCase
             'core:SP' => 'urn:sp',
         ];
 
-        $expected = 'c5b54935db5e291a6b94688921fa77ced8ce425ce8c61a448bd4997f494dbebe@b';
+        $expected = 'be511fc7f95e22816dbac21e3b70546660963b6e9b85f5a41d80bfc6baadd547@b';
         $this->expectException(RuntimeException::class);
         $this->expectExceptionMessage(
             'subjectidattrs:PairwiseID: Generated ID \'' . $expected . '\' can hardly be considered globally unique.'
