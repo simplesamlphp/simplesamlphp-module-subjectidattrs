@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace SimpleSAML\Module\subjectidattrs\Auth\Process;
 
-use Exception;
 use SAML2\Constants;
-//use SAML2\Exception\ProtocolViolationException
-use SAML2\XML\saml\NameID;
+use SAML2\Exception\ProtocolViolationException;
 use SimpleSAML\Assert\Assert;
-use SimpleSAML\Auth;
-use SimpleSAML\Logger;
+use SimpleSAML\{Auth, Logger};
 
 /**
  * Filter to generate the subject ID attribute.
@@ -163,7 +160,8 @@ class SubjectID extends Auth\ProcessingFilter
      *
      * @param array $state
      * @return string|null
-     * @throws \SimpleSAML\Assert\AssertionFailedException if the pre-conditions are not met
+     * @throws \SimpleSAML\Assert\AssertionFailedException if the scope is an empty string
+     * @throws \SAML2\Exception\ProtocolViolationException if the pre-conditions are not met
      */
     protected function getScopeAttribute(array $state): ?string
     {
@@ -190,8 +188,8 @@ class SubjectID extends Auth\ProcessingFilter
         Assert::regex(
             $scope,
             self::SCOPE_PATTERN,
-            'subjectidattrs:' . static::NAME . ': \'scopeAttribute\' contains illegal characters.'
-            // ProtocolViolationException::class
+            'subjectidattrs:' . static::NAME . ': \'scopeAttribute\' contains illegal characters.',
+            ProtocolViolationException::class
         );
         return $scope;
     }
@@ -203,15 +201,15 @@ class SubjectID extends Auth\ProcessingFilter
      *
      * @param string $value
      * @return void
-     * @throws \SimpleSAML\Assert\AssertionFailedException if the post-conditions are not met
+     * @throws \SAML2\Exception\ProtocolViolationException if the post-conditions are not met
      */
     protected function validateGeneratedIdentifier(string $value): void
     {
         Assert::regex(
             $value,
             self::SPEC_PATTERN,
-            'subjectidattrs:' . static::NAME . ': Generated ID \'' . $value . '\' contains illegal characters.'
-            // ProtocolViolationException::class
+            'subjectidattrs:' . static::NAME . ': Generated ID \'' . $value . '\' contains illegal characters.',
+            ProtocolViolationException::class
         );
 
         if (preg_match(self::WARN_PATTERN, $value) === 0) {

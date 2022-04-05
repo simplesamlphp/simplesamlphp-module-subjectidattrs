@@ -4,12 +4,9 @@ declare(strict_types=1);
 
 namespace SimpleSAML\Module\subjectidattrs\Auth\Process;
 
-use Exception;
 use SAML2\Constants;
-use SAML2\XML\saml\NameID;
 use SimpleSAML\Assert\Assert;
-use SimpleSAML\Auth;
-use SimpleSAML\Utils;
+use SimpleSAML\{Auth, Utils};
 
 /**
  * Filter to generate the Pairwise ID attribute.
@@ -46,7 +43,7 @@ class PairwiseID extends SubjectID
     /**
      * @var \SimpleSAML\Utils\Config
      */
-    protected $configUtils;
+    protected Utils\Config $configUtils;
 
 
     /**

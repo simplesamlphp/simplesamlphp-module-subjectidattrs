@@ -91,7 +91,7 @@ class PairwiseIDTest extends TestCase
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
         $this->assertEquals(
-            '53d4f7fe57fb597ada481e81e0f15048bc610774cbb5614ea38f08ea918ba199@ex-ample.org',
+            'c22d58bebef42e50e203d0e932ae4a7f560a51d494266990a5b5c73f34b1854e@ex-ample.org',
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
     }
@@ -115,7 +115,7 @@ class PairwiseIDTest extends TestCase
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
         $this->assertEquals(
-            '53d4f7fe57fb597ada481e81e0f15048bc610774cbb5614ea38f08ea918ba199@ex-ample.org',
+            'c22d58bebef42e50e203d0e932ae4a7f560a51d494266990a5b5c73f34b1854e@ex-ample.org',
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
     }
@@ -139,7 +139,7 @@ class PairwiseIDTest extends TestCase
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
         $this->assertEquals(
-            '53d4f7fe57fb597ada481e81e0f15048bc610774cbb5614ea38f08ea918ba199@ex-ample.org',
+            'c22d58bebef42e50e203d0e932ae4a7f560a51d494266990a5b5c73f34b1854e@ex-ample.org',
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
     }
@@ -163,7 +163,7 @@ class PairwiseIDTest extends TestCase
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
         $this->assertEquals(
-            '53d4f7fe57fb597ada481e81e0f15048bc610774cbb5614ea38f08ea918ba199@ex-ample.org',
+            'c22d58bebef42e50e203d0e932ae4a7f560a51d494266990a5b5c73f34b1854e@ex-ample.org',
             $attributes[Constants::ATTR_PAIRWISE_ID][0]
         );
     }
