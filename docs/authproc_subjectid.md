@@ -1,22 +1,26 @@
 `subjectidattrs:SubjectID`
 ===================
 
-Filter to insert a subject-id that complies with the following specification;
-http://docs.oasis-open.org/security/saml-subject-id-attr/v1.0/saml-subject-id-attr-v1.0.pdf
+Filter to insert a subject-id that complies with the
+[SAML V2.0 Subject Identifier Attributes Profile][specification].
 
-This filter will take an attribute and a scope as input and transforms this into a scoped identifier that is globally unique for a given user.
+[specification]: http://docs.oasis-open.org/security/saml-subject-id-attr/v1.0/saml-subject-id-attr-v1.0.pdf
 
-Note:
------
-If privacy is of your concern, you may want to use the PairwiseID-filter instead.
+This filter will take an attribute and a scope as input and transforms this
+into a scoped identifier that is globally unique for a given user.
 
-Note:
-Since the subject-id is specified as single-value attribute, only the first value of `identifyingAttribute`
- and `scopeAttribute` are considered.
+**Note**
+If privacy is of your concern, you may want to use the PairwiseID-filter
+instead.
+
+**Note**
+Since the subject-id is specified as single-value attribute, only the first
+value of `identifyingAttribute` and `scopeAttribute` are considered.
 
 Examples
 --------
 
+```php
     'authproc' => [
         50 => [
             'class' => 'subjectidattrs:SubjectID',
@@ -24,3 +28,4 @@ Examples
             'scopeAttribute' => 'scope',
         ],
     ],
+```
