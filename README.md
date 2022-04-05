@@ -24,4 +24,12 @@ where `dev-master` instructs Composer to install the `master` branch from the Gi
 [releases](https://github.com/simplesamlphp/simplesamlphp-module-subjectidattrs/releases) available if you
 want to use a stable version of the module.
 
-This module is disabled by default. To enable it, configure it in the SimpleSAMLphp config.php under `module.enable`
+Next thing you need to do is to enable the module: in
+ `config.php`, search for the `module.enable` key and set `subjectidattrs` to true:
+
+ ```php
+     'module.enable' => [
+          'subjectidattrs' => true,
+          …
+     ],
+ ```
