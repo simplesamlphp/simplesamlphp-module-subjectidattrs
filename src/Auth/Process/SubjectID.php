@@ -60,7 +60,7 @@ class SubjectID extends Auth\ProcessingFilter
      *
      * @var string
      */
-    public const WARN_PATTERN = '/^[a-z0-9][a-z0-9=-]{3,126}@[a-z0-9][a-z0-9.-]{3,126}$/i';
+    public const WARN_PATTERN = '/^[a-z0-9][a-z0-9=-]{3,}@[a-z0-9][a-z0-9.-]+\.[a-z]{2,}$/i';
 
     /**
      * The attribute we should generate the subject id from.
@@ -94,7 +94,7 @@ class SubjectID extends Auth\ProcessingFilter
         parent::__construct($config, $reserved);
 
         Assert::keyExists($config, 'identifyingAttribute', "Missing mandatory 'identifyingAttribute' config setting.");
-        Assert::keyExists($config, 'scopeAttribute', "Missing mandatory 'scope' config setting.");
+        Assert::keyExists($config, 'scopeAttribute', "Missing mandatory 'scopeAttribute' config setting.");
         Assert::stringNotEmpty($config['identifyingAttribute']);
         Assert::stringNotEmpty($config['scopeAttribute']);
 
