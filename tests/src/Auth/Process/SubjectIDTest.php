@@ -211,4 +211,20 @@ class SubjectIDTest extends TestCase
 
         self::processFilter($config, $request);
     }
+
+    /**
+     * Test that weak identifiers log a warning: not an actual domain name
+     */
+    public function testScopeNotADomainLogsWarning(): void
+    {
+        $config = ['identifyingAttribute' => 'uid', 'scopeAttribute' => 'scope'];
+        $request = [
+            'Attributes' => ['uid' => ['a1398u9u25'], 'scope' => ['example']],
+        ];
+
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('subjectidattrs:SubjectID: Generated ID \'a1398u9u25@example\' can hardly be considered globally unique.');
+
+        self::processFilter($config, $request);
+    }
 }
